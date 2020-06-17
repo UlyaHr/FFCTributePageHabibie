@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    --darkshade: #181927;
+    --darkaccent: #316DAD;
+    --maincolor: #31447E;
+    --lightaccent: #4BABD1;
+    --lightshade: #F7F2F1;
+
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500px;
+    font-size: 6rem;
+    margin-right: auto;
+    border-top: 2px solid var(--darkaccent);
+    border-bottom: 2px solid var(--darkaccent);
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+header p {
+    letter-spacing: 0.4rem;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+header {
+    height: 100vh;
+    background-image: url("./img/profil-biodata-bj-habibie.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    min-height: 100vh;
+    padding: 6rem;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--darkshade);
+    margin-bottom: 4rem;
+}
+
+.section-title p{
+    font-size: 2rem;
+}
+
+.section-title span{
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+.section1-content {
+    display: flex;
+    padding: 1rem;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: 35%;
+    background-color: var(--lightshade);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    transform: rotate(-2deg) scale(0.9);
+    transition: 300ms ease;
+}
+
+figure:hover {
+    transform: rotate(0deg) scale(1);
+}
+
+#image {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+figcaption {
+    font-size: 1.5rem;
+}
+
+.section1-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding: 5rem;
+    margin-left: 5rem;
+    border-left: 2px solid var(--darkaccent);
+}
+
+.section1-article span{
+    font-weight: bold;
+    color: var(--darkaccent);
+}
+
+@media only screen and (max-width: 768px){
+    .section1-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    figure {
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .section1-article {
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 1rem;
+        border-left: none;
+    }
+}
+
+.timeline-article {
+    margin: 0 auto;
+    width: 830px;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 90px;
+    flex-shrink: 1;
+}
+
+@media screen and (max-width: 855px){
+    .timeline-article {
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .timeline-article {
+        width: 370px;
+        flex-direction: row-reverse;
+        padding-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+  
+.timeline-article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+  
+.timeline-text {
+    width: 330px;
+    min-height: 100px;
+    box-sizing: border-box;
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 855px){
+    .timeline-text {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .timeline-text {
+        width: 250px;
+        padding-left: 5px;
+        padding-right: 10px;
+    }
+}
+  
+.timeline-article:nth-child(even) .timeline-text{
+    text-align: left;
+}
+  
+.timeline-article:last-of-type {
+    padding-bottom: 0;
+}
+
+
+.timeline-article:last-of-type .timeline-image::after {
+    content: none;
+}
+
+.timeline-image {
+    width: 130px;
+    height: 130px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink:1;
+    border: solid 5px var(--maincolor);
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 20px;
+    margin-top: 0px;
+    background-position: center center;
+    background-size: cover;
+    background-color: var(--darkaccent);
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .6)
+}
+
+.timeline-image::after{
+    content: "";
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 170%;
+    background: var(--darkaccent);
+}
+  
+@media screen and (max-width: 530px){
+    .timeline-image {  
+        width: 80px;
+        height: 80px;
+    }
+    .timeline-image::after {
+        top:73px;
+        height: 350%;
+    }
+}
+
+.timeline-last {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote {
+    background-color: var(--darkshade);
+    color: var(--lightshade);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+    min-height: 400px;
+}
+
+.quote-image {
+    background-image: url('./img/quote1.png');
+    background-position: right center;
+    background-size: cover;
+    width: 40%;
+    height: 400px;
+}
+ 
+/* Blockquote main style */
+.blockquote {
+    position: relative;
+    max-width: 620px;
+    margin: 80px auto;
+    align-self: center;
+}
+ 
+/* Blockquote header */
+.blockquote h3 {
+    position: relative; /* for pseudos */
+    color: var(--lightshade);
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    border: 2px solid var(--lightaccent);
+    border-radius:20px;
+    padding: 25px;
+}
+ 
+/* Blockquote right double quotes */
+.blockquote h3:after {
+    content:"";
+    position: absolute;
+    border: 2px solid var(--lightaccent);
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -62px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3; 
+ }
+ 
+.blockquote h3:before {
+    content:"";
+    position: absolute;
+    width: 80px;
+    border: 6px solid var(--darkshade);
+    bottom: -3px;
+    left: 50px;
+    z-index: 2;
+}
+ 
+/* increase header size after 600px */
+@media all and (min-width: 600px) {
+    .blockquote h3 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+}
+ 
+/* Blockquote subheader */
+.blockquote h4 {
+    position: relative;
+    color: var(--lightshade);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 25px;
+    z-index: 1;
+    margin-left:150px;
+    padding-left:12px;
+}
+ 
+  
+.blockquote h4:first-letter {
+   margin-left:-12px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--maincolor);
+}
+
+footer h3 {
+    color: var(--lightshade);
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+@media screen and (max-width:768px) {
+    .quote {
+        flex-direction: column-reverse;
+    }
+    .quote-image {
+        width: 90%;
+    }
+}
